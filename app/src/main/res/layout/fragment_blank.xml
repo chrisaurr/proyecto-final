@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:context=".views.BlankFragment">
+
+    <ImageView
+        android:id="@+id/registroImg"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/registroimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearRegistro1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registroImg"
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
+
+        <EditText
+            android:id="@+id/nombreRegistroEt"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            android:hint="Nombre"
+            android:drawablePadding="8dp"
+            android:background="@drawable/edittext_bkg"/>
+
+        <EditText
+            android:id="@+id/correoRegistroEt"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            android:hint="Correo"
+            android:drawablePadding="8dp"
+            android:background="@drawable/edittext_bkg"/>
+
+        <EditText
+            android:id="@+id/contraRegistroEt"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:drawablePadding="8dp"
+            android:background="@drawable/edittext_bkg"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRegistro2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearRegistro1"
+        android:paddingBottom="20dp">
+
+        <Spinner
+            android:id="@+id/paisSp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/departamentoSp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearRegistro3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearRegistro2">
+
+        <Spinner
+            android:id="@+id/municipioSp"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/registroBtn"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:text="Registrar"
+        app:cornerRadius="30dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearRegistro3"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
